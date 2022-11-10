@@ -1,0 +1,20 @@
+conda create -n iwvi python==3.8
+conda activate iwvi
+pip install notebook matplotlib gym torch 
+
+コードリファクタ
+
+
+拡大状態版SACを実装
+
+
+# 開発メモ
+* enc_beliefは、方策最適化で拡大状態を扱うために使う
+* 最終的にはjoint-optimization vs two-stage optimizationで議論をするため、two-stageのモデル推定は一応何でもいいはず。
+  * ただし、同じにそろえておけば、重み付きvs重み無しの話もやりやすくなる、かも？
+* メタ訓練時の事後分布を、BAMDPプランニングの事前分布として用いる、ももう少し考える。
+
+
+# プライベート研究
+# 論文メモ
+* 問題設定が違うので、wmopoとの比較は要らない
